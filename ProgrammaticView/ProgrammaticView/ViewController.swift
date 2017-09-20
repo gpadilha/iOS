@@ -140,8 +140,62 @@ class ViewController: UIViewController {
         orangeRightCenterY.isActive = true
         
         
+        //blue1
+        let blue1View = UIView()
+        blue1View.backgroundColor = UIColor.blue
+        blue1View.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blue1View)
         
+        let blue1Height = NSLayoutConstraint.init(item: blue1View, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue1Height.isActive = true
         
+        let blue1Width = NSLayoutConstraint.init(item: blue1View, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue1Width.isActive = true
+        
+        let blue1centerX = NSLayoutConstraint.init(item: blue1View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
+        blue1centerX.isActive = true
+        
+//        let blue1centerY = NSLayoutConstraint.init(item: blue1View, attribute: .centerY, relatedBy: .equal, toItem: framingView, attribute: .centerY, multiplier: 1, constant: 0)
+//        blue1centerY.isActive = true
+        
+        //blue2
+        let blue2View = UIView()
+        blue2View.backgroundColor = UIColor.blue
+        blue2View.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blue2View)
+        
+        let blue2Height = NSLayoutConstraint.init(item: blue2View, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue2Height.isActive = true
+        
+        let blue2Width = NSLayoutConstraint.init(item: blue2View, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue2Width.isActive = true
+        
+        let blue2centerX = NSLayoutConstraint.init(item: blue2View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
+        blue2centerX.isActive = true
+        
+//        let blue2centerY = NSLayoutConstraint.init(item: blue2View, attribute: .centerY, relatedBy: .equal, toItem: blue1View, attribute: .centerY, multiplier: 0.5, constant: 0)
+//        blue2centerY.isActive = true
+        
+        //blue3
+        let blue3View = UIView()
+        blue3View.backgroundColor = UIColor.blue
+        blue3View.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blue3View)
+        
+        let blue3Height = NSLayoutConstraint.init(item: blue3View, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue3Height.isActive = true
+        
+        let blue3Width = NSLayoutConstraint.init(item: blue3View, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50.0)
+        blue3Width.isActive = true
+        
+        let blue3centerX = NSLayoutConstraint.init(item: blue3View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
+        blue3centerX.isActive = true
+        
+//        let blue3centerY = NSLayoutConstraint.init(item: blue3View, attribute: .topMargin, relatedBy: .equal, toItem: framingView, attribute: .topMargin, multiplier: 1, constant: 0)
+//        blue3centerY.isActive = true
+        
+        let blueViewsVerticalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[blue1View(==blue2View)]-[blue2View(==blue3View)]-[blue3View(==50)]-|", options: .alignAllLeading, metrics: nil, views: ["blue1View":blue1View, "blue2View":blue2View, "blue3View":blue3View])
+        NSLayoutConstraint.activate(blueViewsVerticalConstraint)
         
     }
     
