@@ -155,8 +155,8 @@ class ViewController: UIViewController {
         let blue1centerX = NSLayoutConstraint.init(item: blue1View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
         blue1centerX.isActive = true
         
-//        let blue1centerY = NSLayoutConstraint.init(item: blue1View, attribute: .centerY, relatedBy: .equal, toItem: framingView, attribute: .centerY, multiplier: 1, constant: 0)
-//        blue1centerY.isActive = true
+        let blue1centerY = NSLayoutConstraint.init(item: blue1View, attribute: .centerY, relatedBy: .equal, toItem: framingView, attribute: .centerY, multiplier: 1, constant: 0)
+        blue1centerY.isActive = true
         
         //blue2
         let blue2View = UIView()
@@ -173,8 +173,8 @@ class ViewController: UIViewController {
         let blue2centerX = NSLayoutConstraint.init(item: blue2View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
         blue2centerX.isActive = true
         
-//        let blue2centerY = NSLayoutConstraint.init(item: blue2View, attribute: .centerY, relatedBy: .equal, toItem: blue1View, attribute: .centerY, multiplier: 0.5, constant: 0)
-//        blue2centerY.isActive = true
+        let blue2centerY = NSLayoutConstraint.init(item: blue2View, attribute: .centerY, relatedBy: .equal, toItem: framingView, attribute: .centerY, multiplier: 0.5, constant: 0)
+        blue2centerY.isActive = true
         
         //blue3
         let blue3View = UIView()
@@ -191,11 +191,11 @@ class ViewController: UIViewController {
         let blue3centerX = NSLayoutConstraint.init(item: blue3View, attribute: .centerX, relatedBy: .equal, toItem: framingView, attribute: .centerX, multiplier: 1.0, constant: 0)
         blue3centerX.isActive = true
         
-//        let blue3centerY = NSLayoutConstraint.init(item: blue3View, attribute: .topMargin, relatedBy: .equal, toItem: framingView, attribute: .topMargin, multiplier: 1, constant: 0)
-//        blue3centerY.isActive = true
+        let blue3centerY = NSLayoutConstraint.init(item: blue3View, attribute: .centerY, relatedBy: .equal, toItem: framingView, attribute: .centerY, multiplier: 1.5, constant: 0)
+        blue3centerY.isActive = true
         
-        let blueViewsVerticalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[blue1View(==blue2View)]-[blue2View(==blue3View)]-[blue3View(==50)]-|", options: .alignAllLeading, metrics: nil, views: ["blue1View":blue1View, "blue2View":blue2View, "blue3View":blue3View])
-        NSLayoutConstraint.activate(blueViewsVerticalConstraint)
+//        let blueViewsVerticalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[blue1View(==blue2View)]-[blue2View(==blue3View)]-[blue3View(==50)]-|", options: .alignAllLeading, metrics: nil, views: ["blue1View":blue1View, "blue2View":blue2View, "blue3View":blue3View])
+//        NSLayoutConstraint.activate(blueViewsVerticalConstraint)
         
     }
     
