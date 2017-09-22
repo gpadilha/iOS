@@ -23,18 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let vancouver = CityViewController()
         vancouver.title = "Vancouver"
+        vancouver.tabBarItem = UITabBarItem(title: "Vancouver", image: nil, tag: 0)
 
         let toronto = CityViewController()
         toronto.title = "Toronto"
+        toronto.tabBarItem = UITabBarItem(title: "Toronto", image: nil, tag: 1)
         
         let montreal = CityViewController()
         montreal.title = "Montreal"
+        montreal.tabBarItem = UITabBarItem(title: "Montreal", image: nil, tag: 2)
         
         let calgary = CityViewController()
         calgary.title = "Calgary"
+        calgary.tabBarItem = UITabBarItem(title: "Calgary", image: nil, tag: 3)
         
         let tabs = [vancouver, toronto, montreal, calgary]
-        view.viewControllers = tabs.map({$0})
+        view.viewControllers = tabs.map{
+            UINavigationController(rootViewController: $0)
+        }
         
         window?.rootViewController = view
         window?.makeKeyAndVisible()

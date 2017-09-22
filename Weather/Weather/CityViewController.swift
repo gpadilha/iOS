@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  CityViewController.swift
 //  Weather
 //
 //  Created by Guilherme Maia on 2017-09-21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityViewController: UINavigationController {
+class CityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class CityViewController: UINavigationController {
     
     func showWeatherDetails(){
         let details = DetailedViewController()
-        pushViewController(details, animated: true)
+         self.navigationController?.pushViewController(details, animated: true)
         
     }
 
